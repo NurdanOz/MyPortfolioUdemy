@@ -1,0 +1,37 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "UpdatePortfolio";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<div class="container-fluid">
+    <h3>Portfolyo Güncelleme Sayfası</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-sub">
+                Portfolyo ilgili güncelleme işlemleri aşağıdaki panelden yapabilirsiniz.
+            </div>
+            <hr />
+            <form method="post">
+                <input type="hidden" asp-for="PortfolioId" class="form-control">
+                <label>Başlık</label>
+                <input type="text" asp-for="Title" class="form-control">
+                <br />
+                <label>Alt Başlık</label>
+                <input type="text" asp-for="SubTitle" class="form-control">
+                <br />
+                <label>Görsel Yolu</label>
+                <input type="text" asp-for="ImageUrl" class="form-control">
+                <br />
+                <label>Proje Linki</label>
+                <input type="text" asp-for="Url" class="form-control">
+                <br />
+                <label>Açıklama</label>
+                <textarea rows="4" class="form-control" asp-for="Description"></textarea>
+                <br />
+                <button class="btn btn-warning">Portfolyo Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>

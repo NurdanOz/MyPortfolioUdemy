@@ -1,0 +1,28 @@
+﻿@model Skill
+@{
+    ViewData["Title"] = "UpdateSkill";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Yetenek Güncelleme Sayfası</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-sub">
+                Yetenek güncelleme sayfasına hoş geldiniz.
+            </div>
+            <hr />
+            <form method="post">
+                <input type="hidden" asp-for="SkillId" class="form-control">
+                <label>Başlık</label>
+                <input type="text" asp-for="Title" class="form-control">
+                <br />
+                <label>Oran</label>
+                <input type="text" asp-for="Value" class="form-control">
+                <br />
+                <button class="btn btn-warning">Yetenek Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
+

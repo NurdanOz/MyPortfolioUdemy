@@ -1,0 +1,31 @@
+﻿@model About
+
+@{
+    ViewData["Title"] = "AboutIndex";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Hakkımda</h3>
+    <div class="card">
+        <div class="card-body">
+            <br />
+            <p style="color:Tomato;"> Hakkımda ile ilgili düzenlemeleri aşağıdaki panelden yapabilirsiniz.</p>
+            
+            <br />
+            <form method="post">
+                <input type="hidden" asp-for="AboutId" />
+                <font size="6" color="pink" face="Roboto"> Başlık </font>
+                <input type="text" asp-for="Title" class="form-control">
+                <br />
+                <font size="6" color="cyan" face="Roboto">Açıklama</font>
+                <textarea rows="6" asp-for="SubDescription" class="form-control"></textarea>
+                <br />
+                <font size="6" color="orange" face="Roboto">Detaylar</font>
+               <textarea rows="6" asp-for="Details" class="form-control"></textarea>
+                <br />
+                <button class="btn btn-outline-success">Butona Basarak Güncelleyebilirsiniz...</button>
+            </form>
+        </div>
+    </div>
+</div>

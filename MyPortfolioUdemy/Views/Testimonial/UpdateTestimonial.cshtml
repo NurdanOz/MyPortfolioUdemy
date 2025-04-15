@@ -1,0 +1,36 @@
+﻿@model Testimonial
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>Referanslar Güncelleme Sayfası</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-sub">
+                Referans güncelleme işlemlerini aşağıdaki panelden yapınız.
+            </div>
+            <hr />
+            <form method="post">
+                <input type="hidden" asp-for="TestimonialId" class="form-control">
+
+                <label>Ad Soyad</label>
+                <input type="text" asp-for="NameSurname" class="form-control">
+                <br />
+                <label>Şirket Adı</label>
+                <input type="text" asp-for="Title" class="form-control">
+                <br />
+                <label>Açıklama</label>
+                <input type="text" asp-for="Description" class="form-control">
+                <br />
+                <label>Link</label>
+                <input type="text" asp-for="ImageUrl" class="form-control">
+                <br />
+
+
+                <button class="btn btn-warning">Referans Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>

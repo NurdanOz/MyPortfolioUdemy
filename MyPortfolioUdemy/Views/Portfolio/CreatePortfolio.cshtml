@@ -1,0 +1,36 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "CreatePortfolio";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<div class="container-fluid">
+    <h3>Deneyim Ekleme Sayfası</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-sub">
+                Portfolyo ilgili ekleme işlemlerini aşağıdaki panelden yapabilirsiniz.
+            </div>
+            <hr />
+            <form method="post">
+                <label>Başlık</label>
+                <input type="text" asp-for="Title" class="form-control">
+                <br />
+                <label>Alt Başlık</label>
+                <input type="text" asp-for="SubTitle" class="form-control">
+                <br />
+                <label>Görsel Yolu</label>
+                <input type="text" asp-for="ImageUrl" class="form-control">
+                <br />
+                <label>Proje</label>
+                <input type="text" asp-for="Url" class="form-control">
+                <br />
+                <label>Açıklama</label>
+                <textarea rows="4" class="form-control" asp-for="Description"></textarea>
+                <br />
+                <button class="btn btn-warning">Portfolyo Ekle</button>
+            </form>
+        </div>
+    </div>
+</div>

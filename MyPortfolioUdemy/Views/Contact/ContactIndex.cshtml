@@ -1,0 +1,42 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "ContactIndex";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <h3>İletişim Bilgileri </h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-sub">
+                İletişim ile ilgili işlemleri aşağıdaki panelden düzenleyebilirsiniz.
+            </div>
+            <hr />
+            <form method="post">
+                <input type="hidden" asp-for="ContactId" />
+                <label>Başlık</label>
+                <input type="text" asp-for="Title" class="form-control">
+                <br />
+                <label>Açıklama</label>
+                <input type="text" asp-for="Description" class="form-control">
+                <br />
+                <label>Telefon 1</label>
+                <input type="text" asp-for="Phone1" class="form-control">
+                <br />
+                <label>Telefon 2</label>
+                <input type="text" asp-for="Phone2" class="form-control">
+                <br />
+                <label>Mail 1</label>
+                <input type="text" asp-for="Email1" class="form-control">
+                <br />
+                <label>Mail 2</label>
+                <input type="text" asp-for="Email2" class="form-control">
+                <br />
+                <label>Adres</label>
+                <input type="text" asp-for="Adress" class="form-control">
+                <br />
+                <button class="btn btn-success">Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
